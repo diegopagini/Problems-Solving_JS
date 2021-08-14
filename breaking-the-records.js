@@ -7,14 +7,13 @@
  * @format
  */
 function breakingRecords(scores) {
-	const games = JSON.parse(JSON.stringify(scores));
-	let min = games[0];
-	let max = games[0];
+	let min = scores[0];
+	let max = scores[0];
 
 	let lowestScores = 0;
 	let highestScores = 0;
 
-	for (const score of games) {
+	for (const score of scores) {
 		if (max < score) {
 			max = score;
 			highestScores++;
